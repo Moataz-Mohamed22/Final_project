@@ -1,0 +1,148 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Variables */
+:root {
+    --main-yellow: #FACC15;
+    --yellow-hover: #EAB308;
+    --dark-1: #0F172A;
+    --dark-2: #1E293B;
+    --card-gray: #2C2C2C;
+    --white: #FFFFFF;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--card-gray);
+}
+
+/* تعديل الهيدر ليضمن التوسط */
+.header {
+    height: 100vh;
+    padding-top: 80px;
+    background-image: url("./assets/images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    /* خلي الصورة في النص */
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    /* لمنع أي سكرول زيادة */
+}
+
+/* أهم جزء: إجبار الـ carousel-item إنه يشتغل بـ Flexbox */
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: flex !important;
+    /* إجبار الـ Flexbox */
+    align-items: center;
+    /* التوسيط الرأسي */
+    min-height: calc(100vh - 80px);
+    /* طول الشاشة ناقص طول الـ navbar */
+}
+
+.header .text {
+    margin-left: 60px;
+    text-align: left;
+    max-width: 550px;
+    color: var(--white);
+}
+
+/* تحسين مكان الـ Indicators لتكون أسفل النص */
+.carousel-indicators {
+    justify-content: flex-start;
+    /* يخليهم على الشمال مع النص */
+    margin-left: 60px;
+    bottom: 10%;
+    /* يرفعهم شوية عن القاع */
+}
+
+/* Button */
+.header .text a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: var(--main-yellow);
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.header .text a:hover {
+    background-color: var(--yellow-hover);
+}
+
+.carousel-indicators .active {
+    background-color: var(--main-yellow);
+    opacity: 1;
+}
+
+/* Animation للنص */
+.carousel-item .text {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all 0.6s ease;
+}
+
+.carousel-item.active .text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: var(--dark-2); 
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    .header .text {
+        margin-left: 20px; 
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .header .text p {
+        font-size: 0.9rem; 
+    }
+
+    .header .text {
+        margin-left: 15px;
+        max-width: 100%;
+        text-align: center; 
+    }
+
+    .carousel-indicators {
+        margin-left: 0;
+        justify-content: center; 
+    }
+    
+    .carousel-item.active {
+        justify-content: center !important; 
+    }
+}
