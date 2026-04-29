@@ -10,23 +10,21 @@
     <title>Feane</title>
 </head>
 
-<body>
-    <!-- ✅ Navbar -->
+<body data-spy="scroll" data-target="#nav" data-offset="100">
+        <!-- ✅ Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 fixed-top">
 
-        <!-- Logo -->
         <a class="navbar-brand font-weight-bold" href="#">Feane</a>
 
-        <!-- Mobile button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="nav">
             <ul class="navbar-nav ml-auto align-items-center">
-                <li class="nav-item active">
-                    <a class="nav-link text-warning" href="#home">HOME</a>
-                </li>
+                <li class="nav-item">
+            <a class="nav-link" href="#home">HOME</a>
+                  
                 <li class="nav-item">
                     <a class="nav-link" href="#menu">MENU</a>
                 </li>
@@ -36,14 +34,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#bookTable">BOOK TABLE</a>
                 </li>
-                <!-- Icons -->
                 <li class="nav-item d-flex mx-3">
                     <i class="fas fa-user text-white mx-2"></i>
                     <i class="fas fa-shopping-cart text-white mx-2"></i>
                     <i class="fas fa-search text-white mx-2"></i>
                 </li>
 
-                <!-- Button -->
                 <li class="nav-item">
                     <a class="btn btn-warning rounded-pill px-3" href="#">
                         Order Online
@@ -53,7 +49,7 @@
         </div>
     </nav>
 
-    <!-- Header -->
+    <!--✅ Header -->
     <section class="header" id="home">
         <div id="textSlider" class="carousel slide" data-ride="carousel" data-interval="2000">
             <ol class="carousel-indicators">
@@ -86,7 +82,7 @@
             </div>
         </div>
     </section>
-    <!-- Start Offers -->
+    <!--✅  Offers -->
     <div class="offers">
         <div class="offers-container">
             <img src="assets/images/o1.jpg" alt="">
@@ -105,7 +101,7 @@
             </div>
         </div>
     </div>
-    <!-- Section menu -->
+    <!--✅ menu -->
     <section class="menu-section" id="menu">
         <h2 class="section-title">Our Menu</h2>
 
@@ -255,6 +251,46 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+    <!-- ✅ About -->
+    <section class="about" id="about">
+        <img src="./assets//images/about-img.png" alt="">
+        <div class="about-text">
+            <h2>We Are Feane</h2>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
+                in the middle of text.</p>
+            <a class="btn-main" href="#">Read More</a>
+        </div>
+    </section>
+
+    <section class="book-table" id="bookTable">
+        <h2>Book A Table</h2>
+
+        <div class="book-container">
+
+            <div class="form">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Phone Number">
+                <input type="email" placeholder="Your Email">
+
+                <select>
+                    <option>How many persons?</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+
+                <input type="date">
+
+                <a class="btn-main" href="#">Book Now</a>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=30.0444,31.2357&z=13&output=embed" loading="lazy">
+                </iframe>
+            </div>
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
