@@ -13,14 +13,16 @@ html {
 :root {
     --main-yellow: #FACC15;
     --yellow-hover: #EAB308;
-    --dark-1: #0F172A;
+    --dark-1: #1f2325;
     --dark-2: #1E293B;
     --card-gray: #2C2C2C;
     --white: #FFFFFF;
 }
 
 /* Navbar */
-
+.navbar{
+    background-color: var(--dark-1) !important;
+}
 .navbar-nav .nav-item .nav-link.active {
     color: var(--main-yellow) !important;
     font-weight: bold;
@@ -162,7 +164,7 @@ html {
 .custom-card {
     width: 100%;
     max-width: 350px;
-    background-color: #222831;
+    background-color: var(--dark-1);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -244,7 +246,7 @@ html {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #222831;
+    background-color: var(--dark-1);
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -322,7 +324,7 @@ html {
 
 @media (max-width: 991px) {
     .navbar-nav {
-        background-color: var(--dark-2);
+        background-color: var(--dark-1);
         padding: 20px;
         border-radius: 10px;
         margin-top: 15px;
