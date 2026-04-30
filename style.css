@@ -20,9 +20,10 @@ html {
 }
 
 /* Navbar */
-.navbar{
+.navbar {
     background-color: var(--dark-1) !important;
 }
+
 .navbar-nav .nav-item .nav-link.active {
     color: var(--main-yellow) !important;
     font-weight: bold;
@@ -322,6 +323,89 @@ html {
     border-radius: 10px;
 }
 
+/* customer-reviews */
+.customer-reviews {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.customer-containers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.customer-reviews h2 {
+    margin-bottom: 50px;
+}
+.customer-reviews-container {
+    background-color: var(--dark-1);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.customer-reviews-container:hover {
+    transform: translateY(-10px);
+}
+
+.customer-reviews-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 15px 0;
+    border: 4px solid var(--main-yellow);
+}
+
+.customer-reviews-container h3 {
+text-align: center;
+}
+
+.customer-reviews-container h5 {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+/* Footer */
+.footer {
+    background-color: var(--dark-1);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.footer i {
+    margin-right: 8px;
+}
+
+.social-icons i {
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    color: var(--main-yellow);
+    transform: scale(1.2);
+}
+
+.footer hr {
+    border-color: #444;
+    margin: 30px 0;
+}
 @media (max-width: 991px) {
     .navbar-nav {
         background-color: var(--dark-1);
