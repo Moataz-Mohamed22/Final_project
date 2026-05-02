@@ -32,7 +32,10 @@ html {
 .nav-link {
     transition: color 0.3s ease;
 }
-
+.nav-item i:hover {
+     color: var(--main-yellow)  !important;
+    transform: scale(1.2);
+}
 /* Header */
 .header {
     height: 100vh;
